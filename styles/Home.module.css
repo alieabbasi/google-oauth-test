@@ -114,3 +114,12 @@
     flex-direction: column;
   }
 }
+
+.loginButton {
+  border: 2px #22830e solid;
+}
+
+.loginButton:hover,
+.loginButton:focus {
+  background-color: #22830e44;
+}

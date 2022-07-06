@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import { useSession, signOut, signIn } from 'next-auth/react'
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -23,8 +24,9 @@ const Home: NextPage = () => {
   } else {
     return (
       <div className={styles.container}>
-        Signed out
-        <button onClick={() => signIn("google", {callbackUrl: "http://localhost:3000/api/hello"})}>Sign In</button>
+        <div>Signed out</div>
+        <br />
+        <Link href={"/login"} className={styles.loginButton}>Sign In</Link>
       </div>
     )
   }
